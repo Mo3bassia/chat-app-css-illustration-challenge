@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Pale-Violet: hsl(276, 100%, 81%);
+  --Moderate-Violet: hsl(276, 55%, 52%);
+  --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  --Grayish-Blue: hsl(206, 6%, 79%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  --bg-chat-light: #f9f4fa;
+}
+
+.bg-container {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100vh;
+  top: 0;
+}
+
+.bg-dark {
+  background-image: linear-gradient(
+    to top,
+    var(--Light-Violet),
+    var(--Light-Magenta)
+  );
+  left: 0;
+  top: 0;
+  transform: translateX(-50%);
+  border-bottom-right-radius: 50vw;
+  border-bottom-left-radius: 50vw;
+}
+
+.bg-light {
+  background-color: var(--bg-chat-light);
+  right: 0;
+  bottom: 0;
+  transform: translateX(50%);
+  border-top-right-radius: 50vw;
+  border-top-left-radius: 50vw;
+}
+
+.bg-dark,
+.bg-light {
+  width: 450px;
+  height: 50vh;
+  position: absolute;
+}
+
+@media (min-width: 800px) {
+  .bg-dark {
+    left: -60px;
+  }
+  .bg-light {
+    right: -60px;
+  }
+  .bg-dark,
+  .bg-light {
+    transform: translateX(0);
+    height: 80vh;
+  }
+}
