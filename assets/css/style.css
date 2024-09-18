@@ -157,3 +157,89 @@ main > * {
 .mobile-container .header .more span:nth-of-type(3) {
   top: 6px;
 }
+
+.messages-container {
+  margin-top: 10px;
+  font-size: 0.65rem;
+  background-color: #f8f8f8;
+}
+
+.message {
+  max-width: 150px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  line-height: 1.6;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.message.left {
+  background-color: var(--bg-chat-light);
+  color: var(--Light-Violet);
+}
+.message.right {
+  background-color: #fff;
+  color: var(--Light-Violet);
+}
+
+.messages-container .left {
+  margin-right: auto;
+}
+
+.messages-container .right {
+  margin-left: auto;
+}
+
+.messages-container .images.right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.messages-container .images img {
+  width: 40px;
+  border-radius: 12px;
+}
+
+.messages-container .list-item {
+  background-image: linear-gradient(
+    to left,
+    var(--Light-Violet),
+    var(--Light-Magenta)
+  );
+  padding: 10px;
+  border-radius: 15px;
+  border-bottom-left-radius: 5px;
+  color: var(--bg-chat-light);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.messages-container .list-item .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-chat-light);
+}
+
+.messages-container .list-item .price {
+  margin-left: auto;
+  font-weight: 800;
+  font-size: 16px;
+  margin-right: 7px;
+}
+
+.messages-container .type {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.messages-container .type .send {
+  background-color: var(--Very-Dark-Desaturated-Violet);
+}
