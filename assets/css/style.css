@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Rubik;
 }
 
 :root {
@@ -14,6 +15,10 @@
   --Light-Magenta: hsl(293, 100%, 63%);
   --Light-Violet: hsl(264, 100%, 61%);
   --bg-chat-light: #f9f4fa;
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet: hsl(270, 20%, 96%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Very-Light-Magenta: hsl(289, 100%, 72%);
 }
 
 .bg-container {
@@ -21,6 +26,7 @@
   min-width: 100%;
   min-height: 100vh;
   top: 0;
+  z-index: 0;
 }
 
 .bg-dark {
@@ -64,4 +70,90 @@
     transform: translateX(0);
     height: 80vh;
   }
+}
+
+.mobile-container {
+  width: 270px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+main > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-container .header {
+  background-image: linear-gradient(
+    to top,
+    var(--Light-Violet),
+    var(--Light-Magenta)
+  );
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: var(--bg-chat-light);
+  gap: 12px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  padding-top: 25px;
+}
+
+.mobile-container .header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 15px;
+  background-color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.mobile-container .header img {
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.mobile-container .header .username .title {
+  font-weight: 500;
+}
+
+.mobile-container .header .username .status {
+  font-weight: 400;
+  font-size: 0.55rem;
+  color: var(--Dark-Grayish-Violet);
+  margin-top: 3px;
+}
+
+.mobile-container .header .more {
+  position: relative;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.mobile-container .header .more span {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  width: 2px;
+  height: 2px;
+}
+
+.mobile-container .header .more span:nth-of-type(1) {
+  top: -2px;
+}
+.mobile-container .header .more span:nth-of-type(2) {
+  top: 2px;
+}
+.mobile-container .header .more span:nth-of-type(3) {
+  top: 6px;
 }
