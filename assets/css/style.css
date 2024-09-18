@@ -75,7 +75,7 @@
 .mobile-container {
   width: 270px;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 30px;
   background-color: #fff;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
@@ -183,6 +183,10 @@ main > * {
   color: var(--Light-Violet);
 }
 
+.messages-container {
+  padding: 10px;
+}
+
 .messages-container .left {
   margin-right: auto;
 }
@@ -238,8 +242,78 @@ main > * {
   justify-content: space-between;
   padding: 10px;
   background-color: #fff;
+  align-items: center;
+  border-radius: 50vh;
+  padding-inline: 20px;
 }
 
 .messages-container .type .send {
   background-color: var(--Very-Dark-Desaturated-Violet);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 90%;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.mobile-container {
+  min-width: 270px;
+}
+
+.container > .right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container > .right .description {
+  width: 90%;
+}
+
+.description .title {
+  color: var(--Very-Dark-Desaturated-Violet);
+  font-size: 40px;
+}
+
+.description .description {
+  line-height: 1.8;
+  color: var(--Dark-Grayish-Violet);
+  margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+  .container > .right .description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .container .right {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
